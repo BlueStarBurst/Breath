@@ -35,7 +35,7 @@ export function Question(props) {
 								setSelected(answer);
 							}}
 						>
-							{answer}
+							<p>{answer}</p>
 						</Button>
 					))}
 				</div>
@@ -49,7 +49,7 @@ export function Question(props) {
 								setSelected(answer);
 							}}
 						>
-							{answer}
+							<p>{answer}</p>
 						</Button>
 					))}
 				</div>

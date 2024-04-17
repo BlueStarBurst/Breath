@@ -56,6 +56,7 @@ html {
 }
 
 .q {
+  padding: 10rem;
   margin-top: 5%;
   position: relative;
   width: 100%;
@@ -75,6 +76,7 @@ html {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 1rem;
+  max-width: 80vw;
 }
 
 .a {
@@ -94,6 +96,7 @@ html {
   height: var(--progress);
   background-color: rgb(255, 255, 255);
   z-index: 100;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
 }
 
 .block::before {
@@ -103,6 +106,7 @@ html {
   height: calc(var(--progress)/4);
   transform: translateY(calc(var(--progress)*-2));
   background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
 
@@ -113,6 +117,7 @@ html {
   height: calc(var(--progress)/2);
   transform: translateY(calc(var(--progress)*-1));
   background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
 
@@ -132,13 +137,28 @@ html {
 
 .background img {
   position: absolute;
-  opacity: 0.25;
+  opacity: 0.5;
   transform: translateY(-40%);
+}
+
+.header img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .ans-button {
   width: 100%;
+  height: max-content;
+  min-height: 7rem;
   border-radius: 1000px !important;
+}
+
+.ans-button p {
+  text-wrap: wrap;
+  margin: 0;
 }
 
 
@@ -147,15 +167,15 @@ html {
 }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: starts;
+  align-items: center;
   flex-direction: column;
-  padding: 20rem;
-  height: 90vh;
-  background-color: white;
+  height: 56.25vw;
   color: black;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .header h1 {
@@ -163,6 +183,14 @@ html {
 }
 
 .header p {
-  max-width: 60%;
-  font-size: 110%;
+  margin-top: 10rem;
+  max-width: 50%;
+  text-align: center;
+}
+
+.desc {
+  justify-content: start;
+}
+.desc h2 {
+  margin-top: 11vw;
 }
